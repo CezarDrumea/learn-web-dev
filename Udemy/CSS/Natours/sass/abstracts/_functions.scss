@@ -1,0 +1,6 @@
+@function calc-width($curr-dim, $total-dim) {
+  @return calc(
+    ((100% - (#{$total-dim} - 1) * #{$gutter-horizontal}) / #{$total-dim}) * #{$curr-dim} +
+      #{$gutter-horizontal} * (#{$curr-dim} - 1)
+  );
+}
