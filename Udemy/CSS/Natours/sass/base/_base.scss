@@ -9,6 +9,22 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
+
+  // @include responsive(phone) {
+  //   font-size: 50%;
+  // }
+
+  @include responsive(tab-land) {
+    font-size: 56.25%; // 1200px-
+  }
+
+  @include responsive(tab-port) {
+    font-size: 50%; // 900px-
+  }
+
+  @include responsive(big-desktop) {
+    font-size: 75%; // 1800px+
+  }
 }
 
 body {
@@ -19,4 +35,8 @@ body {
   color: $color-grey-dark-1;
   padding: 3rem;
   box-sizing: border-box;
+
+  @include responsive(tab-port) {
+    padding: 0;
+  }
 }
