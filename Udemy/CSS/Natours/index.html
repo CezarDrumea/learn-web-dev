@@ -64,6 +64,7 @@
         >
       </div>
     </header>
+    <div class="header__skew"></div>
 
     <main>
       <section class="section-about">
@@ -97,6 +98,25 @@
           <div class="col-1-of-2">
             <div class="composition">
               <img
+                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                alt="Photo 1"
+                class="composition__photo composition__photo--p1"
+              />
+              <img
+                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                alt="Photo 2"
+                class="composition__photo composition__photo--p2"
+              />
+              <img
+                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                alt="Photo 3"
+                class="composition__photo composition__photo--p3"
+              />
+
+              <!-- <img
                 src="./img/nat-1-large.jpg"
                 alt="Photo 1"
                 class="composition__photo composition__photo--p1"
@@ -108,7 +128,7 @@
                 src="./img/nat-3-large.jpg"
                 alt="Photo 3"
                 class="composition__photo composition__photo--p3"
-              />
+              /> -->
             </div>
           </div>
         </div>
@@ -406,10 +426,9 @@
                       Large tour group
                     </label>
                   </div>
-
-                  <div class="form__group u-margin-top-medium">
-                    <button class="btn btn--green">Next step &rarr;</button>
-                  </div>
+                </div>
+                <div class="form__group u-margin-top-medium">
+                  <button class="btn btn--green">Next step &rarr;</button>
                 </div>
               </form>
             </div>
@@ -420,7 +439,21 @@
 
     <footer class="footer">
       <div class="footer__logo-box">
-        <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo" />
+        <picture class="footer__logo">
+          <source
+            srcset="
+              img/logo-green-small-1x.png 1x,
+              img/logo-green-small-2x.png 2x
+            "
+            media="(max-width: 37.5em)"
+          />
+          <img
+            srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+            alt="Full logo"
+            class="footer__logo"
+            src="img/logo-green-2x.png"
+          />
+        </picture>
       </div>
       <div class="row">
         <div class="col-1-of-2">
@@ -460,8 +493,8 @@
     <div class="popup" id="popup">
       <div class="popup__content">
         <div class="popup__left">
-          <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img" />
-          <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img" />
+          <div class="popup__img popup__img--1"></div>
+          <div class="popup__img popup__img--2"></div>
         </div>
         <div class="popup__right">
           <a href="#section-tours" class="popup__close">&times;</a>
@@ -483,9 +516,6 @@
             consectetur ut rem optio amet ipsam sit et quidem fugiat, enim
             libero, inventore vero earum voluptatibus laboriosam voluptatum
             natus repudiandae aliquid facilis nisi repellat vel harum debitis.
-            Porro. Animi ea eaque illum, exercitationem earum minus iste aut,
-            eum voluptates illo alias consequuntur odio autem laudantium?
-            Repellendus, excepturi quos.
           </p>
           <a href="#" class="btn btn--green">Book now</a>
         </div>

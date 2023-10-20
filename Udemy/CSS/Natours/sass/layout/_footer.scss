@@ -1,6 +1,6 @@
 .footer {
   background-color: $color-grey-dark-3;
-  padding: 10rem 0;
+  padding: 10rem 3rem;
   font-size: 1.4rem;
   color: $color-grey-light-1;
 
@@ -11,6 +11,10 @@
   &__logo-box {
     text-align: center;
     margin-bottom: 8rem;
+
+    @include responsive(tab-port) {
+      margin-bottom: 6rem;
+    }
   }
 
   &__logo {
